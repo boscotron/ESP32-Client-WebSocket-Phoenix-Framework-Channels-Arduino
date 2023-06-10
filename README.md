@@ -15,3 +15,11 @@ Antes de ejecutar el código, asegúrate de realizar la siguiente configuración
 2. Ingresa la contraseña de tu red Wi-Fi en la variable `password`.
 3. Ingresa la dirección IP o el nombre de dominio de tu servidor Phoenix en la variable `websockets_server_host`.
 4. Ingresa el puerto del servidor en la variable `websockets_server_port`.
+
+## Uso
+
+1. Configura las variables `ssid`, `password`, `websockets_server_host` y `websockets_server_port` según tus necesidades.
+
+2. Carga el código en tu placa Arduino.
+
+3. Abre el monitor serial para ver los mensajes recibidos.
