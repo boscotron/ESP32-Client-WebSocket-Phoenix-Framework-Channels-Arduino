@@ -29,10 +29,10 @@ void setup() {
 
     Serial.println("Conectado a la red Wi-Fi, conectándose al servidor.");
     // Intentar conectarse al servidor Websockets
-    bool connected = client.connect(websockets_server_host, websockets_server_port, "/socket/websocket");
+    bool connected = client.connect(websockets_server_host, websockets_server_port, "/socket/websocket"); // Cuando creas un channel con phoenix le agrega un /websoket al final de lo que declares 
     if(connected) {
         Serial.println("¡Conectado!");
-        // Unirse al canal ws_server:42
+        // Unirse al canal ws_server:42 !ojo! por lo general es 'room:*' o parecido, cambialo segun tu proyecto
         String joinMessage = R"({"topic":"ws_server:42","event":"phx_join","payload":{},"ref":"1"})";
         client.send(joinMessage);
     } else {
